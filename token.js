@@ -4,9 +4,10 @@ const queryString = require('query-string');
 
 console.log(`https://oauth.vk.com/authorize?${queryString.stringify({
   client_id: '',
-  redirect_uri: 'http://localhost:3000',
-  scope: 'offline',
+  redirect_uri: 'blank.html',
+  scope: 'messages,offline,photos',
   display: 'page',
-  response_type: 'code',
+  v: '5.17',
+  response_type: 'token',
+  revoke: '1',
 })}`);
- 
